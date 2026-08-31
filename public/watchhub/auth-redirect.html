@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opening WatchHub...</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         max-width: 420px; margin: 80px auto 0; padding: 0 24px; color: #1a1a1a;
+         text-align: center; line-height: 1.6; }
+  img { height: 44px; margin-bottom: 24px; }
+  h1 { font-size: 20px; margin: 0 0 8px; }
+  p { color: #555; font-size: 15px; margin: 0 0 28px; }
+  a.button { display: inline-block; background: #6d28d9; color: white; text-decoration: none;
+             padding: 12px 28px; border-radius: 24px; font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<img src="logo.png" alt="WatchHub">
+<h1>Opening WatchHub...</h1>
+<p>If nothing happens in a few seconds, tap the button below.</p>
+<a class="button" id="open-app" href="#">Open WatchHub</a>
+
+<script>
+  // Supabase's own redirect (after verifying an email confirmation or
+  // password-reset link) lands here with whatever query string it decided
+  // to attach (typically ?code=...). This page's only job is to forward
+  // that, verbatim, into the app via its custom URL scheme - Supabase's
+  // /verify endpoint doesn't reliably honor a custom (non-http) redirect_to
+  // for OTP-based flows the way it does for OAuth, so this real https page
+  // is used as the redirect_to instead, and the handoff to the app happens
+  // here, client-side, where we're no longer subject to that limitation.
+  //
+  // Deliberately "watchhub://", NOT "com.example.tv_app://" (the scheme
+  // used elsewhere, e.g. for Google sign-in) - confirmed live that the
+  // underscore in "tv_app" isn't valid in a URI scheme per the URL spec,
+  // which browsers' location.href= enforces strictly: it silently fails to
+  // recognize the scheme and resolves the string as a same-origin relative
+  // path instead (producing a broken .../com.example.tv_app://... URL,
+  // not an actual app launch). "watchhub" has no such character and is
+  // registered as its own intent-filter in AndroidManifest.xml.
+  var target = 'watchhub://auth-callback' + window.location.search;
+  document.getElementById('open-app').href = target;
+
+  // Auto-attempt immediately - most Android browsers allow this on load.
+  // Browsers that block automatic scheme navigation without a user gesture
+  // (notably some iOS Safari versions) fall back to the visible button.
+  window.location.href = target;
+</script>
+
+</body>
+</html>
