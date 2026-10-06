@@ -5,11 +5,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/what-we-do", label: "What We Do" },
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/what-we-do", label: "Capabilities" },
+  { href: "/work", label: "Products" },
+  { href: "/about", label: "Company" },
 ];
 
 export default function Nav() {
@@ -17,93 +15,89 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f5f3ee]/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-slate-900"
+          className="group flex items-center gap-3"
+          aria-label="ZKOKATECH home"
           onClick={() => setOpen(false)}
         >
-          Zkokatech
+          <span className="grid h-9 w-9 place-items-center bg-[#111315] text-sm font-bold tracking-[-0.08em] text-white transition-transform duration-300 group-hover:-rotate-3">
+            ZK
+          </span>
+          <span className="flex items-baseline gap-2">
+            <span className="text-sm font-bold tracking-[0.16em] text-[#111315]">
+              ZKOKATECH
+            </span>
+            <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-black/45 sm:inline">
+              LLC
+            </span>
+          </span>
         </Link>
 
-        <nav className="hidden md:flex md:items-center md:gap-8">
+        <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => {
-            const isActive =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
+            const active = pathname.startsWith(link.href);
             return (
               <Link
                 key={link.href}
                 href={link.href}
                 className={
-                  isActive
-                    ? "text-sm font-medium text-slate-900"
-                    : "text-sm font-medium text-slate-600 hover:text-slate-900"
+                  "relative text-sm font-medium transition-colors " +
+                  (active
+                    ? "text-[#111315]"
+                    : "text-black/55 hover:text-[#111315]")
                 }
               >
                 {link.label}
+                {active && (
+                  <span className="absolute -bottom-2 left-0 h-px w-full bg-[#3157d5]" />
+                )}
               </Link>
             );
           })}
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-[#111315] px-4 py-2.5 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            Contact
+            <span aria-hidden="true">↗</span>
+          </Link>
         </nav>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100 md:hidden"
-          aria-label="Toggle menu"
+          className="grid h-10 w-10 place-items-center border border-black/15 text-[#111315] md:hidden"
+          aria-label="Toggle navigation"
           aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={1.8}
-            className="h-6 w-6"
-          >
-            {open ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
-              />
-            )}
-          </svg>
+          <span className="font-mono text-lg leading-none">{open ? "×" : "≡"}</span>
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-slate-200 bg-white md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col px-4 py-2 sm:px-6">
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={
-                    isActive
-                      ? "border-b border-slate-100 py-3 text-sm font-medium text-slate-900 last:border-none"
-                      : "border-b border-slate-100 py-3 text-sm font-medium text-slate-600 last:border-none"
-                  }
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+        <nav className="border-t border-black/10 bg-[#f5f3ee] md:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col px-5 py-4 sm:px-8">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="border-b border-black/10 py-4 text-base font-medium text-[#111315]"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 flex items-center justify-between bg-[#111315] px-4 py-4 text-sm font-semibold text-white"
+            >
+              Contact ZKOKATECH
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </nav>
       )}
