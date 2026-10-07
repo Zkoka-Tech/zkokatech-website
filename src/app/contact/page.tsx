@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact ZKOKATECH LLC for company and product enquiries.",
+  alternates: { canonical: "https://zkokatech.com/contact" },
 };
 
 export default function ContactPage() {
