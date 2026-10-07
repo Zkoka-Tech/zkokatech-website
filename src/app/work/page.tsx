@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Products",
   description:
     "Products created by ZKOKATECH, including WatchHub for movies, TV shows, anime, watch history, and community.",
+  alternates: { canonical: "https://zkokatech.com/work" },
 };
 
 export default function WorkPage() {

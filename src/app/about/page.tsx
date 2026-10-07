@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Company",
   description:
     "About ZKOKATECH LLC, a four-founder software company based in New Mexico.",
+  alternates: { canonical: "https://zkokatech.com/about" },
 };
 
 const OPERATING_PRINCIPLES = [

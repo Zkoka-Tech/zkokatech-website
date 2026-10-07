@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Software Company",
   description:
     "ZKOKATECH LLC designs, builds, ships, and operates digital products across mobile, web, and SaaS.",
+  alternates: { canonical: "https://zkokatech.com/" },
 };
 
 const CAPABILITIES = [
