@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Capabilities",
   description:
     "How ZKOKATECH approaches mobile products, web products, SaaS systems, and product delivery.",
+  alternates: { canonical: "https://zkokatech.com/what-we-do" },
 };
 
 const AREAS = [
