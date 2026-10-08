@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Company",
+  title: { absolute: "About ZKOKATECH LLC — Independent Software Company" },
   description:
-    "About ZKOKATECH LLC, a four-founder software company based in New Mexico.",
+    "Learn about ZKOKATECH LLC, a four-founder New Mexico software company building and operating mobile, web, and SaaS products.",
   alternates: { canonical: "https://zkokatech.com/about" },
 };
 
