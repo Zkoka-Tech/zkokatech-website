@@ -67,8 +67,14 @@ export default function AboutPage() {
                 after they reach users.
               </p>
               <p className="mt-8 max-w-2xl text-base leading-7 text-black/55">
-                Our current portfolio begins with WatchHub, our movie, TV show,
-                and anime tracking product. The same company structure supports
+                Our current portfolio begins with{" "}
+                <a
+                  href="https://watchhub.zkokatech.com/tv-time-alternative.html"
+                  className="font-medium text-[#3157d5] underline decoration-black/15 underline-offset-4 hover:decoration-[#3157d5]"
+                >
+                  WatchHub
+                </a>
+                , our movie, TV show, and anime tracking product. The same company structure supports
                 the next products we choose to build across mobile and web.
               </p>
             </div>
