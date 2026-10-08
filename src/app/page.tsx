@@ -2,10 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Software Company",
+  title: { absolute: "ZKOKATECH — Software Company & Digital Products" },
   description:
-    "ZKOKATECH LLC designs, builds, ships, and operates digital products across mobile, web, and SaaS.",
+    "ZKOKATECH LLC is a New Mexico software company building and operating mobile apps, web products, and SaaS systems, including WatchHub.",
   alternates: { canonical: "https://zkokatech.com/" },
+  openGraph: {
+    url: "https://zkokatech.com/",
+    title: "ZKOKATECH — Software Company & Digital Products",
+    description:
+      "We build and operate mobile apps, web products, and SaaS systems from idea through launch and improvement.",
+  },
 };
 
 const CAPABILITIES = [
