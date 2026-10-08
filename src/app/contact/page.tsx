@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact ZKOKATECH LLC for company and product enquiries.",
+  title: { absolute: "Contact ZKOKATECH LLC — Company & Product Enquiries" },
+  description:
+    "Contact ZKOKATECH LLC for company, product, partnership, support, and general enquiries about our software and digital products.",
   alternates: { canonical: "https://zkokatech.com/contact" },
 };
 
