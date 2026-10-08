@@ -76,6 +76,13 @@ export default function WorkPage() {
                     Google Play
                     <span aria-hidden="true">↗</span>
                   </a>
+                  <a
+                    href="https://watchhub.zkokatech.com/tv-time-alternative.html"
+                    className="inline-flex items-center gap-3 border border-white/20 px-5 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/45"
+                  >
+                    TV Time alternative
+                    <span aria-hidden="true">↗</span>
+                  </a>
                 </div>
               </div>
 
