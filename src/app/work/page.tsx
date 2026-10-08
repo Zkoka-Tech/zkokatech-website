@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: { absolute: "ZKOKATECH Products — WatchHub & Digital Apps" },
   description:
-    "Products created by ZKOKATECH, including WatchHub for movies, TV shows, anime, watch history, and community.",
+    "Explore software products built by ZKOKATECH, including WatchHub, an Android tracker for movies, TV shows, anime, watch history, and community.",
   alternates: { canonical: "https://zkokatech.com/work" },
 };
 
