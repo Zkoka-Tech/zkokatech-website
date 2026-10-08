@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Capabilities",
+  title: { absolute: "Mobile, Web & SaaS Product Development | ZKOKATECH" },
   description:
-    "How ZKOKATECH approaches mobile products, web products, SaaS systems, and product delivery.",
+    "See how ZKOKATECH designs, builds, launches, and improves mobile apps, web products, and SaaS systems from product definition through delivery.",
   alternates: { canonical: "https://zkokatech.com/what-we-do" },
 };
 
