@@ -55,10 +55,10 @@ export default function Footer() {
                 Contact
               </p>
               <a
-                href="mailto:zkokatech@gmail.com"
+                href="mailto:contact@zkokatech.com"
                 className="mt-5 block text-sm text-white/70 transition-colors hover:text-white"
               >
-                zkokatech@gmail.com
+                contact@zkokatech.com
               </a>
               <p className="mt-3 text-sm leading-6 text-white/45">
                 New Mexico
