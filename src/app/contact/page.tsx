@@ -30,7 +30,7 @@ export default function ContactPage() {
       <section className="bg-[#fbfaf7]">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-20 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:py-24">
           <a
-            href="mailto:zkokatech@gmail.com"
+            href="mailto:contact@zkokatech.com"
             className="group flex min-h-[320px] flex-col justify-between border border-black/10 bg-[#3157d5] p-7 text-white transition-transform duration-300 hover:-translate-y-1 sm:p-10"
           >
             <div className="flex items-start justify-between">
@@ -43,7 +43,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">
-                zkokatech@gmail.com
+                contact@zkokatech.com
               </p>
               <p className="mt-3 text-sm text-white/65">
                 The direct contact address for ZKOKATECH LLC.
