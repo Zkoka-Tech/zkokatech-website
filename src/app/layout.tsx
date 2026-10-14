@@ -41,8 +41,8 @@ export const metadata: Metadata = {
       "ZKOKATECH designs, builds, launches, and operates digital products across mobile, web, and SaaS.",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: process.env.ZKOKATECH_PRIVATE_REVIEW !== "1",
+    follow: process.env.ZKOKATECH_PRIVATE_REVIEW !== "1",
   },
 };
 
@@ -84,12 +84,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
-      <body className="flex min-h-full flex-col font-sans">
+      <body id="top">
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <MotionSystem />
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
+
