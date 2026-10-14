@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   // can't run a Node server at all. `next build` now produces a static
   // `out/` folder directly instead of a server build.
   output: "export",
+  trailingSlash: true,
 };
 
 export default nextConfig;
+
