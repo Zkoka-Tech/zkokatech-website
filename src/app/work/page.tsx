@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -129,6 +130,45 @@ export default function WorkPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="border-b border-black/10">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
+          <article className="grid gap-8 border border-black/10 p-7 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+            <div>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#3157d5]">
+                  Product 02
+                </span>
+                <span className="border border-black/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-black/55">
+                  Private · by invitation
+                </span>
+              </div>
+              <h2 className="mt-6 text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
+                Adsmero
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-7 text-black/55">
+                A read-only reporting workspace for Google Ads: connect
+                accounts, choose which ones to include, and see campaign
+                performance in one view with your team.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 lg:justify-self-end">
+              <Link
+                href="/adsmero"
+                className="inline-flex items-center gap-3 bg-[#111315] px-5 py-3.5 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
+              >
+                About Adsmero
+              </Link>
+              <Link
+                href="/adsmero-privacy"
+                className="inline-flex items-center gap-3 border border-black/15 px-5 py-3.5 text-sm font-semibold transition-colors hover:border-black/40"
+              >
+                Privacy policy
+              </Link>
             </div>
           </article>
         </div>
