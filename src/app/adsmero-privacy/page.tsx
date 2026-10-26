@@ -61,7 +61,7 @@ export default function AdsmeroPrivacyPage() {
 
       <h3>Data we receive from Google</h3>
       <p>
-        When a workspace member connects Google Ads, Google asks them to grant
+        When a workspace owner connects Google Ads, Google asks them to grant
         Adsmero these permissions:
       </p>
       <ul>
@@ -244,10 +244,11 @@ export default function AdsmeroPrivacyPage() {
       </p>
       <ul>
         <li>
-          <strong>Disconnecting Google Ads in Adsmero</strong> asks Google to
-          revoke Adsmero&rsquo;s access and deletes the stored tokens. Reporting
-          data that was already imported, and the list of accounts, stay in the
-          workspace.
+          <strong>Disconnecting Google Ads in Adsmero</strong> (workspace owners)
+          asks Google to revoke Adsmero&rsquo;s access, deletes the stored
+          tokens and cancels pending imports. The tokens are deleted even if
+          Google cannot be reached. Reporting data that was already imported,
+          and the list of accounts, stay in the workspace.
         </li>
         <li>
           <strong>You can also remove Adsmero&rsquo;s access</strong> from your

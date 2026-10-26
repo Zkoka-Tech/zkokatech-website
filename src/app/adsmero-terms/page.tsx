@@ -42,9 +42,9 @@ export default function AdsmeroTermsPage() {
       <h2>2. Workspaces and roles</h2>
       <p>
         Data in Adsmero belongs to a workspace. Workspace owners manage members,
-        advertising connections, which accounts are included and whether
-        imports run automatically. All members of a workspace can see its
-        accounts, reports and activity.
+        advertising connections and whether imports run automatically. Every
+        member of a workspace can choose which accounts are included, request
+        imports, and see its accounts, reports and activity.
       </p>
 
       <h2>3. Connecting advertising accounts</h2>
@@ -63,8 +63,9 @@ export default function AdsmeroTermsPage() {
           policies.
         </li>
         <li>
-          You can disconnect a connection in Adsmero, or remove Adsmero&rsquo;s
-          access from your Google Account, at any time.
+          A workspace owner can disconnect a connection in Adsmero at any time.
+          Whoever authorized a Google account can also remove Adsmero&rsquo;s
+          access from that Google Account.
         </li>
       </ul>
 

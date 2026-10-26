@@ -15,7 +15,7 @@ const FEATURES = [
     number: "01",
     title: "Connect Google Ads",
     description:
-      "Authorize Adsmero with your Google account. It lists the Google Ads accounts that account can access, including client accounts under a manager account.",
+      "A workspace owner authorizes Adsmero with a Google account. Adsmero lists the Google Ads accounts that account can access, including client accounts under a manager account.",
   },
   {
     number: "02",
@@ -171,9 +171,9 @@ export default function AdsmeroPage() {
               </p>
               <p className="mt-4 text-base leading-7 text-white/60">
                 Google access tokens are encrypted before they are stored and are
-                never sent to your browser. You can disconnect Google Ads in
-                Adsmero, or remove its access from your Google Account, at any
-                time.
+                never sent to your browser. Workspace owners can disconnect
+                Google Ads in Adsmero at any time, and access can also be
+                removed from the Google Account that granted it.
               </p>
             </div>
             <div className="border border-white/15 p-6 sm:p-8">
