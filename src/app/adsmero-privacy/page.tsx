@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://zkokatech.com/adsmero-privacy" },
 };
 
-// Keep this policy in step with the application (zkokatech-ads-workspace):
+// Keep this policy in step with the Adsmero application:
 // requested OAuth scopes, Google Ads fields read, stored tables, cookies and
 // providers. Google's OAuth verification checks it against the app.
 export default function AdsmeroPrivacyPage() {
