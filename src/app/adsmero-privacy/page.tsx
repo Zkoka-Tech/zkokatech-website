@@ -117,7 +117,10 @@ export default function AdsmeroPrivacyPage() {
         Each user can connect their own Google account to export reports to
         Google Sheets. This connection is separate from the Google Ads
         connection, belongs to that user only, and is not used by other members
-        of a workspace. When you connect it, Google asks you to grant:
+        of a workspace. Google Sheets export is being introduced: until it is
+        available in Adsmero, Adsmero does not request this permission and
+        collects none of the information described in this section. When you
+        connect it, Google asks you to grant:
       </p>
       <ul>
         <li>
@@ -388,7 +391,7 @@ export default function AdsmeroPrivacyPage() {
           <strong>Disconnecting Google Ads in Adsmero</strong> (workspace owners)
           deletes the stored tokens and cancels pending imports, and asks Google
           to revoke Adsmero&rsquo;s access. The tokens are deleted even if Google
-          cannot be reached. Adsmero does not ask Google to revoke when the same
+          cannot be reached. Adsmero may not ask Google to revoke when the same
           Google account is still used by another Adsmero connection (Google Ads
           in another workspace, or a Google Sheets export connection), because
           Google would end that access too, or when Adsmero cannot confirm that

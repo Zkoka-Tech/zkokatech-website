@@ -77,9 +77,9 @@ export default function AdsmeroTermsPage() {
       <h2>4. Exporting to Google Sheets</h2>
       <ul>
         <li>
-          You can connect your own Google account to export reports to Google
-          Sheets. Only export reports that you are allowed to store in that
-          Google account.
+          When Google Sheets export is available in Adsmero, you can connect
+          your own Google account to export reports to Google Sheets. Only
+          export reports that you are allowed to store in that Google account.
         </li>
         <li>
           Each export creates a new spreadsheet in your Google Drive. You

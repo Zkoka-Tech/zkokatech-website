@@ -5,7 +5,7 @@
  * this is merged into main - main deploys to the live site automatically. While it is empty a
  * production build fails, so a page with a placeholder date can never be published.
  */
-export const ADSMERO_LEGAL_EFFECTIVE_DATE = "";
+export const ADSMERO_LEGAL_EFFECTIVE_DATE = "12 November 2026";
 
 const DATE_FORMAT =
   /^([1-9]|[12]\d|3[01]) (January|February|March|April|May|June|July|August|September|October|November|December) 20\d\d$/;
