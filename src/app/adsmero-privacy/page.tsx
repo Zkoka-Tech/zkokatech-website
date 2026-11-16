@@ -117,10 +117,7 @@ export default function AdsmeroPrivacyPage() {
         Each user can connect their own Google account to export reports to
         Google Sheets. This connection is separate from the Google Ads
         connection, belongs to that user only, and is not used by other members
-        of a workspace. Google Sheets export is being introduced: until it is
-        available in Adsmero, Adsmero does not request this permission and
-        collects none of the information described in this section. When you
-        connect it, Google asks you to grant:
+        of a workspace. When you connect it, Google asks you to grant:
       </p>
       <ul>
         <li>

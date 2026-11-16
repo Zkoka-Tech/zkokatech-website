@@ -37,9 +37,9 @@ const FEATURES = [
   },
   {
     number: "05",
-    title: "Export to CSV",
+    title: "Export to CSV or Google Sheets",
     description:
-      "Download the campaign report as a CSV file with exact figures, for spreadsheets or your own analysis.",
+      "Download the campaign report as a CSV file with exact figures, or connect your own Google account to export the report to a new spreadsheet in your Google Drive. Adsmero can access only the spreadsheets it creates.",
   },
   {
     number: "06",
