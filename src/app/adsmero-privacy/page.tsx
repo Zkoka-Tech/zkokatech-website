@@ -475,10 +475,10 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           Server and sign-in logs are kept by our providers for a limited time
-          under their own practices. Resend keeps the notices we send through
-          it, and their delivery records, under its data-processing terms while
-          our account with it is active, and deletes them within 90 days after
-          that account ends.
+          under their own practices. Under our current Resend plan, Resend keeps
+          the notices we send through it, and their delivery logs, for 30 days.
+          It deletes any remaining data within 90 days after our account with
+          it ends.
         </li>
         <li>
           Database backups that we make ourselves are kept for no longer than 90
