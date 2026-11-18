@@ -265,6 +265,10 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>to send sign-in emails you request;</li>
         <li>
+          to send you important account, security, privacy-policy and service
+          notices;
+        </li>
+        <li>
           to keep Adsmero secure, prevent misuse, and investigate errors.
         </li>
       </ul>
@@ -351,10 +355,22 @@ export default function AdsmeroPrivacyPage() {
           <strong>Service providers</strong> that run Adsmero for us, under their
           own terms: <strong>Supabase</strong> (database, sign-in and sign-in
           emails; Adsmero&rsquo;s database is hosted in the European Union, AWS
-          region eu-west-1, Ireland) and <strong>Cloudflare</strong> (hosting,
-          network delivery and Cloudflare Access sign-in protection).
-          Cloudflare handles requests in its global network, so information may
-          be processed in the United States and other countries.
+          region eu-west-1, Ireland), <strong>Cloudflare</strong> (hosting,
+          network delivery and Cloudflare Access sign-in protection) and{" "}
+          <strong>Resend</strong> (delivery of the account, security,
+          privacy-policy and service notices we email to you). Cloudflare
+          handles requests in its global network, so information may be
+          processed in the United States and other countries.
+        </li>
+        <li>
+          <strong>Resend</strong> receives the recipient&rsquo;s email address
+          and the content of each notice we send through it, and keeps records
+          of their delivery. It stores this information in the United States,
+          even though our emails are sent from its Ireland (eu-west-1) region.
+          Resend is separate from Adsmero&rsquo;s advertising-platform
+          connections: we do not use it to send advertising-platform
+          credentials, and we do not intentionally send campaign reports or
+          other advertising data through it.
         </li>
         <li>
           <strong>Google</strong>, as the source of Google Ads data, for
@@ -459,7 +475,10 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           Server and sign-in logs are kept by our providers for a limited time
-          under their own practices.
+          under their own practices. Resend keeps the notices we send through
+          it, and their delivery records, under its data-processing terms while
+          our account with it is active, and deletes them within 90 days after
+          that account ends.
         </li>
         <li>
           Database backups that we make ourselves are kept for no longer than 90

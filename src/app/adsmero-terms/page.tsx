@@ -151,8 +151,8 @@ export default function AdsmeroTermsPage() {
 
       <h2>10. Third-party services</h2>
       <p>
-        Adsmero relies on services from Google, Microsoft, Supabase and
-        Cloudflare. We are not responsible for those services. Adsmero is not
+        Adsmero relies on services from Google, Microsoft, Supabase, Cloudflare
+        and Resend. We are not responsible for those services. Adsmero is not
         affiliated with, endorsed or sponsored by Google or Microsoft. Google
         Ads, Google Sheets and Google Drive are trademarks of Google LLC.
         Microsoft Advertising is a trademark of the Microsoft group of
