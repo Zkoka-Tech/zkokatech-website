@@ -5,12 +5,13 @@ import { adsmeroLegalDate } from "../adsmero-legal-date";
 export const metadata: Metadata = {
   title: { absolute: "Adsmero Privacy Policy | ZKOKATECH" },
   description:
-    "How Adsmero, a Google Ads reporting workspace by ZKOKATECH LLC, accesses, uses, stores, shares and deletes data, including data received from Google APIs.",
+    "How Adsmero, an advertising reporting workspace by ZKOKATECH LLC, accesses, uses, stores, shares and deletes data, including data received from Google APIs and Microsoft Advertising.",
   alternates: { canonical: "https://zkokatech.com/adsmero-privacy" },
 };
 
 // Keep this policy in step with the Adsmero application (requested OAuth
-// scopes, Google Ads fields read, stored tables, cookies, retention, providers)
+// scopes, Google Ads and Microsoft Advertising fields read, stored tables,
+// cookies, retention, providers)
 // and with the Adsmero repository's docs/PRIVACY_OPERATIONS.md (deletion
 // requests, backups). Google's OAuth verification checks it against the app.
 export default function AdsmeroPrivacyPage() {
@@ -23,8 +24,10 @@ export default function AdsmeroPrivacyPage() {
         <p>
           This policy explains how ZKOKATECH LLC (&ldquo;ZKOKATECH&rdquo;,
           &ldquo;we&rdquo;, &ldquo;us&rdquo;) handles information in{" "}
-          <strong>Adsmero</strong>, our web application for reporting on Google
-          Ads campaigns and exporting those reports to Google Sheets. It covers
+          <strong>Adsmero</strong>, our web application for reporting on
+          advertising campaigns (Google Ads and, where it is available,
+          Microsoft Advertising) and exporting those reports to Google Sheets.
+          It covers
           the Adsmero application only; our other products have their own
           policies.
         </p>
@@ -64,11 +67,8 @@ export default function AdsmeroPrivacyPage() {
 
       <h3>Data we receive from Google Ads</h3>
       <p>
-        Adsmero currently connects to Google Ads only. Support for other
-        advertising platforms, such as Microsoft Advertising, is not enabled;
-        we will update this policy before enabling it. When a workspace owner
-        connects Google Ads, Google asks them to grant Adsmero these
-        permissions:
+        When a workspace owner connects Google Ads, Google asks them to grant
+        Adsmero these permissions:
       </p>
       <ul>
         <li>
@@ -110,6 +110,60 @@ export default function AdsmeroPrivacyPage() {
         imports are currently disabled; if we make them available, they will
         run only for accounts where a workspace owner has switched them on. We
         store these tokens encrypted, as described in section 6.
+      </p>
+
+      <h3>Data we receive from Microsoft Advertising</h3>
+      <p>
+        Support for Microsoft Advertising is being introduced gradually and may
+        not yet be available in your workspace. This section describes how it
+        works where it is available.
+      </p>
+      <p>
+        A workspace owner connects Microsoft Advertising by signing in with the
+        Google account that their Microsoft Advertising user signs in with.
+        (Signing in with a Microsoft account is not offered at this time; we
+        will update this policy before offering it.) This Google sign-in is
+        separate from the Google Ads and Google Sheets connections. Google asks
+        the owner to grant Adsmero these permissions:
+      </p>
+      <ul>
+        <li>
+          <code>profile</code> and <code>email</code>: basic information about
+          your Google account. Adsmero requests them only because Microsoft
+          Advertising needs them to recognize you: Adsmero sends the access
+          token that Google issues to Microsoft Advertising, which uses it to
+          identify your Microsoft Advertising user. Adsmero does not use this
+          sign-in to access any Google service, and it does not store your
+          Google profile details; it stores the permissions granted and the
+          encrypted tokens.
+        </li>
+      </ul>
+      <p>With that sign-in, Adsmero reads from Microsoft Advertising only:</p>
+      <ul>
+        <li>
+          the ID of your Microsoft Advertising user and its contact email
+          address (or user name), to show which user a connection uses;
+        </li>
+        <li>
+          the list of Microsoft Advertising accounts that user can access, with
+          each account&rsquo;s ID, name, account number, customer ID, currency,
+          time zone and status;
+        </li>
+        <li>
+          for accounts that you include in Adsmero: campaign IDs, names and
+          statuses, and daily impressions, clicks, spend, conversions and all
+          conversions per campaign, in each account&rsquo;s own time zone.
+        </li>
+      </ul>
+      <p>
+        Microsoft delivers this reporting data as a compressed report file.
+        Adsmero reads the file while importing and keeps only the figures
+        listed above, not the file itself. Adsmero does not request other
+        Microsoft Advertising data, such as ads, keywords, audiences or billing
+        information. Imports work as they do for Google Ads: they are started
+        manually by a workspace member, and automatic imports are disabled.
+        The tokens for this connection are stored encrypted, as described in
+        section 6.
       </p>
 
       <h3>Google Sheets export (optional)</h3>
@@ -157,7 +211,8 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           A log of actions in each workspace (for example creating a workspace,
-          adding or removing members, connecting or disconnecting Google Ads,
+          adding or removing members, connecting or disconnecting Google Ads or
+          Microsoft Advertising,
           including or excluding accounts, requesting imports, switching
           automatic imports on or off, and exporting reports to Google Sheets),
           with who did it and when. An export entry also records its date range
@@ -178,7 +233,8 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           Your browser stores your Adsmero sign-in session and your light/dark
-          display preference. While you connect Google Ads or Google Sheets,
+          display preference. While you connect Google Ads, Microsoft
+          Advertising or Google Sheets,
           Adsmero sets one short-lived cookie (<code>zk_oauth_binding</code> or{" "}
           <code>zk_sheets_binding</code>, about 10 minutes) to confirm that the
           authorization finishes in the browser that started it. These cookies
@@ -213,9 +269,9 @@ export default function AdsmeroPrivacyPage() {
         </li>
       </ul>
       <p>
-        Adsmero uses Google Ads data to read and report only. It never creates
-        or changes campaigns, budgets, bids or any other settings in your
-        advertising accounts.
+        Adsmero uses Google Ads and Microsoft Advertising data to read and
+        report only. It never creates or changes campaigns, budgets, bids or
+        any other settings in your advertising accounts.
       </p>
 
       <h2>4. Google API Services User Data Policy</h2>
@@ -256,6 +312,12 @@ export default function AdsmeroPrivacyPage() {
           machine-learning model;
         </li>
         <li>
+          the Google sign-in used for Microsoft Advertising is used only so
+          that Microsoft Advertising can identify you: Adsmero sends the
+          resulting access token only to Microsoft Advertising, for the
+          connection you started, and never uses it to access Google services;
+        </li>
+        <li>
           with Google Drive access, Adsmero only creates spreadsheets and writes
           your reports into them; it does not receive the content of your Google
           Drive;
@@ -279,8 +341,9 @@ export default function AdsmeroPrivacyPage() {
       <ul>
         <li>
           <strong>Within your workspace.</strong> Members of a workspace can see
-          its Google Ads connections (including the email address of the Google
-          account used), its advertising accounts, reports, import history and
+          its advertising connections (including the email address of the
+          Google account used for Google Ads, or of the Microsoft Advertising
+          user), its advertising accounts, reports, import history and
           activity log. Your Google Sheets connection and your list of exports
           are visible only to you.
         </li>
@@ -295,13 +358,22 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           <strong>Google</strong>, as the source of Google Ads data, for
-          authorization, and as the provider of Google Sheets and Google Drive
+          authorization (including the Google sign-in used for Microsoft
+          Advertising), and as the provider of Google Sheets and Google Drive
           when you export.
+        </li>
+        <li>
+          <strong>Microsoft</strong>, as the source of Microsoft Advertising
+          data. To read it, Adsmero sends Microsoft the Google-issued access
+          token described in section 2, which Microsoft uses to identify your
+          Microsoft Advertising user. Microsoft handles these requests under its
+          own terms and privacy statement.
         </li>
         <li>
           <strong>Your Google Drive, when you export.</strong> Any member of a
           workspace can export reports they can see in Adsmero to their own
-          Google Drive. An export sends that report to Google, which stores it
+          Google Drive. An export sends that report, which can include
+          Microsoft Advertising data, to Google, which stores it
           as a spreadsheet under the exporting person&rsquo;s Google account.
           Who can then see that spreadsheet depends on its sharing settings in
           Google Drive, which that person controls; Adsmero does not share it.
@@ -325,8 +397,9 @@ export default function AdsmeroPrivacyPage() {
       <ul>
         <li>Data travels over encrypted HTTPS connections.</li>
         <li>
-          Google access and refresh tokens (for Google Ads and for Google Sheets)
-          are encrypted with AES-256-GCM before they are stored. The encryption
+          Google access and refresh tokens (for Google Ads, for the Google
+          sign-in used with Microsoft Advertising, and for Google Sheets) are
+          encrypted with AES-256-GCM before they are stored. The encryption
           keys are kept as server secrets, separate from the database, and
           tokens are never sent to your browser.
         </li>
@@ -338,7 +411,9 @@ export default function AdsmeroPrivacyPage() {
         <li>
           Adsmero&rsquo;s server only allows requests to Google that list
           accounts or read reports, and blocks requests that would change an
-          advertising account. For Google Sheets it only allows creating a
+          advertising account. For Microsoft Advertising it only allows looking
+          up the signed-in user, listing accounts, and requesting and
+          downloading reports. For Google Sheets it only allows creating a
           spreadsheet and writing into the spreadsheets it created; spreadsheet
           content is written as plain values, never as formulas.
         </li>
@@ -362,9 +437,9 @@ export default function AdsmeroPrivacyPage() {
       </p>
       <ul>
         <li>
-          Google Ads and Google Sheets tokens are kept until the connection is
-          disconnected in Adsmero (see below), or until the account or workspace
-          is deleted.
+          Tokens for Google Ads, Microsoft Advertising and Google Sheets are
+          kept until the connection is disconnected in Adsmero (see below), or
+          until the account or workspace is deleted.
         </li>
         <li>
           Records of authorization attempts and export attempts are used only
@@ -395,6 +470,14 @@ export default function AdsmeroPrivacyPage() {
           it is not. In those cases Adsmero tells you, and you can remove the
           permission yourself in your Google Account (below). Reporting data that
           was already imported, and the list of accounts, stay in the workspace.
+        </li>
+        <li>
+          <strong>Disconnecting Microsoft Advertising in Adsmero</strong>{" "}
+          (workspace owners) deletes the stored tokens and cancels pending
+          imports. Adsmero does not ask Google to revoke the Google sign-in
+          used for this connection; to remove it at Google as well, use your
+          Google Account (below). Reporting data that was already imported, and
+          the list of accounts, stay in the workspace.
         </li>
         <li>
           <strong>Disconnecting Google Sheets in Adsmero</strong> (Settings
@@ -428,7 +511,10 @@ export default function AdsmeroPrivacyPage() {
           </a>
           . Adsmero can then no longer import data or create spreadsheets with
           that Google account. This removes Adsmero&rsquo;s Google Ads and Google
-          Sheets access for that Google account together.
+          Sheets access for that Google account together. The Google sign-in
+          used for Microsoft Advertising may appear there as a separate entry;
+          removing it ends Adsmero&rsquo;s Microsoft Advertising access through
+          that Google account.
         </li>
         <li>
           <strong>Workspace owners can remove members</strong>, which ends their
@@ -468,9 +554,10 @@ export default function AdsmeroPrivacyPage() {
           workspace&rsquo;s activity log, is the organization&rsquo;s data. If you
           ask us to delete your account, that data stays with the workspace
           without your account details, unless a workspace owner asks us to
-          delete it. If you connected Google Ads for a workspace, the Google
-          account shown on that connection is removed once a workspace owner
-          has disconnected it in Adsmero.
+          delete it. If you connected Google Ads or Microsoft Advertising for a
+          workspace, the Google account or Microsoft Advertising user shown on
+          that connection is removed once a workspace owner has disconnected it
+          in Adsmero.
         </li>
         <li>
           Deleted information may remain in our encrypted backups until they
