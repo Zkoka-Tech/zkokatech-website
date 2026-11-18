@@ -442,6 +442,16 @@ export default function AdsmeroPrivacyPage() {
           until the account or workspace is deleted.
         </li>
         <li>
+          The identity shown on an advertising connection (for Google Ads, the
+          Google account&rsquo;s identifier and email address; for Microsoft
+          Advertising, the Microsoft Advertising user&rsquo;s ID and contact
+          email address or user name) stays on the connection&rsquo;s record
+          when the connection is disconnected, as part of the workspace&rsquo;s
+          connection history. It is removed when you ask us to remove it (see
+          &ldquo;Deletion requests&rdquo; below) or when the workspace is
+          deleted.
+        </li>
+        <li>
           Records of authorization attempts and export attempts are used only
           for security and to limit how often actions can be repeated. Older
           records are cleared automatically the next time the same feature is
@@ -469,15 +479,18 @@ export default function AdsmeroPrivacyPage() {
           Google would end that access too, or when Adsmero cannot confirm that
           it is not. In those cases Adsmero tells you, and you can remove the
           permission yourself in your Google Account (below). Reporting data that
-          was already imported, and the list of accounts, stay in the workspace.
+          was already imported, the list of accounts and the connection&rsquo;s
+          record (including the Google account shown on it) stay in the
+          workspace.
         </li>
         <li>
           <strong>Disconnecting Microsoft Advertising in Adsmero</strong>{" "}
           (workspace owners) deletes the stored tokens and cancels pending
           imports. Adsmero does not ask Google to revoke the Google sign-in
           used for this connection; to remove it at Google as well, use your
-          Google Account (below). Reporting data that was already imported, and
-          the list of accounts, stay in the workspace.
+          Google Account (below). Reporting data that was already imported, the
+          list of accounts and the connection&rsquo;s record (including the
+          Microsoft Advertising user shown on it) stay in the workspace.
         </li>
         <li>
           <strong>Disconnecting Google Sheets in Adsmero</strong> (Settings
@@ -554,10 +567,17 @@ export default function AdsmeroPrivacyPage() {
           workspace&rsquo;s activity log, is the organization&rsquo;s data. If you
           ask us to delete your account, that data stays with the workspace
           without your account details, unless a workspace owner asks us to
-          delete it. If you connected Google Ads or Microsoft Advertising for a
-          workspace, the Google account or Microsoft Advertising user shown on
-          that connection is removed once a workspace owner has disconnected it
-          in Adsmero.
+          delete it.
+        </li>
+        <li>
+          Disconnecting a connection does not by itself remove the identity
+          shown on it. If you connected Google Ads or Microsoft Advertising for
+          a workspace, you can ask us to remove the Google account or Microsoft
+          Advertising user details stored on that connection, on its own or as
+          part of deleting your account. We remove them once a workspace owner
+          has disconnected the connection in Adsmero; if it is still connected,
+          we will tell you, and the workspace owner needs to disconnect it
+          first. The reporting data already imported stays with the workspace.
         </li>
         <li>
           Deleted information may remain in our encrypted backups until they
