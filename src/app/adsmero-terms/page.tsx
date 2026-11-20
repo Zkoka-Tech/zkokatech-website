@@ -6,7 +6,7 @@ import { adsmeroLegalDate } from "../adsmero-legal-date";
 export const metadata: Metadata = {
   title: { absolute: "Adsmero Terms of Service | ZKOKATECH" },
   description:
-    "Terms of service for Adsmero, a read-only Google Ads reporting workspace by ZKOKATECH LLC, with optional export to Google Sheets.",
+    "Terms of service for Adsmero, a read-only advertising reporting workspace by ZKOKATECH LLC for Google Ads and, where available, Microsoft Advertising, with optional export to Google Sheets.",
   alternates: { canonical: "https://zkokatech.com/adsmero-terms" },
 };
 
@@ -21,7 +21,8 @@ export default function AdsmeroTermsPage() {
           These Terms of Service (&ldquo;Terms&rdquo;) are an agreement between
           you and ZKOKATECH LLC (&ldquo;ZKOKATECH&rdquo;, &ldquo;we&rdquo;,
           &ldquo;us&rdquo;) for your use of <strong>Adsmero</strong>, our web
-          application for reporting on Google Ads campaigns and exporting those
+          application for reporting on advertising campaigns (Google Ads and,
+          where it is available, Microsoft Advertising) and exporting those
           reports to Google Sheets. By using Adsmero
           you agree to these Terms. If you use Adsmero for an organization, you
           confirm that you may accept these Terms on its behalf.
@@ -44,9 +45,10 @@ export default function AdsmeroTermsPage() {
       <h2>2. Workspaces and roles</h2>
       <p>
         Data in Adsmero belongs to a workspace. Workspace owners manage members
-        and advertising connections. Every member of a workspace can choose
-        which accounts are included, request imports, and see its accounts,
-        reports and activity. Imports are currently started manually;
+        and advertising connections, choose which accounts are included, and
+        start or cancel imports. Every member of a workspace can see its
+        accounts, reports and activity, and can export the reports they can
+        see. Imports are currently started manually by a workspace owner;
         automatic daily imports are currently disabled. If they are made
         available, they will run only for accounts where a workspace owner
         switches them on.
@@ -55,17 +57,18 @@ export default function AdsmeroTermsPage() {
       <h2>3. Connecting advertising accounts</h2>
       <ul>
         <li>
-          Only connect Google Ads accounts that you are allowed to share with
-          your workspace, and only with a Google account you are authorized to
-          use for that purpose.
+          Only connect advertising accounts (Google Ads, or Microsoft
+          Advertising where it is available) that you are allowed to share with
+          your workspace, and only with a Google account or Microsoft
+          Advertising user that you are authorized to use for that purpose.
         </li>
         <li>
           Adsmero reads account and reporting data only. It does not create or
           change campaigns, budgets, bids or settings.
         </li>
         <li>
-          Your use of Google Ads remains subject to Google&rsquo;s own terms and
-          policies.
+          Your use of Google Ads and Microsoft Advertising remains subject to
+          Google&rsquo;s and Microsoft&rsquo;s own terms and policies.
         </li>
         <li>
           A workspace owner can disconnect a connection in Adsmero at any time.
@@ -104,10 +107,11 @@ export default function AdsmeroTermsPage() {
 
       <h2>6. Reports</h2>
       <p>
-        Reports show the data Google Ads provided at the time of the last
-        import. Figures can differ from what Google Ads shows later, for
-        example because conversions are reported with a delay. Check important
-        figures in Google Ads before relying on them. Adsmero reports are not
+        Reports show the data the advertising platform (Google Ads or
+        Microsoft Advertising) provided at the time of the last import. Figures
+        can differ from what the platform shows later, for example because
+        conversions are reported with a delay. Check important figures in the
+        platform before relying on them. Adsmero reports are not
         financial, legal or tax advice.
       </p>
 
@@ -124,8 +128,8 @@ export default function AdsmeroTermsPage() {
         </li>
         <li>share your sign-in details or let others use your account;</li>
         <li>
-          use Adsmero in breach of the law or of Google&rsquo;s terms and
-          policies.
+          use Adsmero in breach of the law or of Google&rsquo;s or
+          Microsoft&rsquo;s terms and policies.
         </li>
       </ul>
 
@@ -148,10 +152,12 @@ export default function AdsmeroTermsPage() {
 
       <h2>10. Third-party services</h2>
       <p>
-        Adsmero relies on services from Google, Supabase and Cloudflare. We are
-        not responsible for those services. Adsmero is not affiliated with,
-        endorsed or sponsored by Google. Google Ads, Google Sheets and Google
-        Drive are trademarks of Google LLC.
+        Adsmero relies on services from Google, Microsoft, Supabase, Cloudflare
+        and Resend. We are not responsible for those services. Adsmero is not
+        affiliated with, endorsed or sponsored by Google or Microsoft. Google
+        Ads, Google Sheets and Google Drive are trademarks of Google LLC.
+        Microsoft Advertising is a trademark of the Microsoft group of
+        companies.
       </p>
 
       <h2>11. Disclaimers and limitation of liability</h2>
