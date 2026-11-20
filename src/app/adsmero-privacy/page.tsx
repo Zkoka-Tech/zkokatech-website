@@ -105,8 +105,8 @@ export default function AdsmeroPrivacyPage() {
       </p>
       <p>
         Google also issues access and refresh tokens so that Adsmero can import
-        data when someone in the workspace requests it. Imports are currently
-        manual: each one is started by a workspace member. Automatic daily
+        data when a workspace owner requests it. Imports are currently
+        manual: each one is started by a workspace owner. Automatic daily
         imports are currently disabled; if we make them available, they will
         run only for accounts where a workspace owner has switched them on. We
         store these tokens encrypted, as described in section 6.
@@ -161,7 +161,7 @@ export default function AdsmeroPrivacyPage() {
         listed above, not the file itself. Adsmero does not request other
         Microsoft Advertising data, such as ads, keywords, audiences or billing
         information. Imports work as they do for Google Ads: they are started
-        manually by a workspace member, and automatic imports are disabled.
+        manually by a workspace owner, and automatic imports are disabled.
         The tokens for this connection are stored encrypted, as described in
         section 6.
       </p>
@@ -276,6 +276,22 @@ export default function AdsmeroPrivacyPage() {
         Adsmero uses Google Ads and Microsoft Advertising data to read and
         report only. It never creates or changes campaigns, budgets, bids or
         any other settings in your advertising accounts.
+      </p>
+      <p>
+        Adsmero does not use Google Ads or Microsoft Advertising data to
+        develop, train or improve artificial intelligence or machine-learning
+        models. This describes Adsmero&rsquo;s own use of that data; it does
+        not describe how other companies&rsquo; AI services handle data that
+        you choose to give them, such as data you copy from Adsmero or from
+        an exported spreadsheet.
+      </p>
+      <p>
+        Microsoft Advertising data is shown only to the members of the
+        workspace it belongs to, as described for Google Ads data in
+        section 4. Apart from that, people at ZKOKATECH do not read Microsoft
+        Advertising data unless you have asked us to (for example to help
+        with a problem), it is needed for security (such as investigating
+        abuse), or the law requires it.
       </p>
 
       <h2>4. Google API Services User Data Policy</h2>
@@ -600,8 +616,9 @@ export default function AdsmeroPrivacyPage() {
         </li>
         <li>
           Deleted information may remain in our encrypted backups until they
-          reach the 90-day limit above, and in our providers&rsquo; logs under
-          their own practices.
+          reach the 90-day limit above. It may also remain for a time in our
+          service providers&rsquo; logs and backups, which they keep and
+          delete under their own retention and deletion practices.
         </li>
       </ul>
 

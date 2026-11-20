@@ -45,9 +45,10 @@ export default function AdsmeroTermsPage() {
       <h2>2. Workspaces and roles</h2>
       <p>
         Data in Adsmero belongs to a workspace. Workspace owners manage members
-        and advertising connections. Every member of a workspace can choose
-        which accounts are included, request imports, and see its accounts,
-        reports and activity. Imports are currently started manually;
+        and advertising connections, choose which accounts are included, and
+        start or cancel imports. Every member of a workspace can see its
+        accounts, reports and activity, and can export the reports they can
+        see. Imports are currently started manually by a workspace owner;
         automatic daily imports are currently disabled. If they are made
         available, they will run only for accounts where a workspace owner
         switches them on.
